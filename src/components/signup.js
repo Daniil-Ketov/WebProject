@@ -70,7 +70,7 @@ const [errorModal,setErrorModal] = useState(undefined);
             <TextField className="userInfo mb-2" placeholder="E-mail" name="email" type="email" />
               <Textarea placeholder="Ваш комментарий" name="comments"  id="comments" />
               <div id="confirmation">
-                  <input type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
+                  <input required={true} type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
                   <label for="checker"> Отправляя заявку, я даю согласие на <a href=""> обработку своих персональных данных.*</a></label>
               </div>
             <button id="submit" type="submit">Свяжитесь с нами</button>
