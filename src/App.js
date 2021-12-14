@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import { Signup } from '../../src/components/signup';
 import './App.css';
-import Modal from "../../src/components/Modal";
+import ReactDOM from "react-dom";
 
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
                             <li class="nav-item dropdown px-2">
                                 <a href="./admin">Администрирование</a>
                                 <ul>
-        
+
                                 </ul>
                             </li>
                             <li class="nav-item nav-item px-2">
@@ -32,7 +31,7 @@ function App() {
                             <li class="nav-item dropdown px-2">
                                 <a href="./about">О нас</a>
                                 <ul>
-                                    
+
                                 </ul>
                             </li>
                             <li class="nav-item px-2">
@@ -257,7 +256,7 @@ function App() {
                     </div>
                 </div>
                 <div class="partners container">
-        
+
                 </div>
                 <div class="faq container">
                     <div>
@@ -266,40 +265,40 @@ function App() {
                     <div>
                         <ol>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                             <li>
-                                
+
                             </li>
                         </ol>
                     </div>
@@ -320,5 +319,6 @@ function App() {
         </body>
     );
 }
+
 
 export default App;
