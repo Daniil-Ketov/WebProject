@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import './App.css';
 import ReactDOM from "react-dom";
+import Modal from "./components/Modal";
+import {Signup} from "./components/signup";
 
 
 function App() {
+    const [modalActive,setModalActive] = useState(undefined);
     return (
         <body>
             <header>
@@ -311,7 +314,10 @@ function App() {
                             <h1>text</h1>
                         </div>
                         <div class="webform">
-                            form
+                            <button onClick={()=> setModalActive(true)}>СВЯЗЬ С НАМИ</button>
+                            <Modal active={modalActive} setActive={setModalActive}>
+                                <Signup/>
+                            </Modal>
                         </div>
                     </div>
                 </div>
