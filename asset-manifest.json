@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/WebProject/static/css/main.b083720a.chunk.css",
-    "main.js": "/WebProject/static/js/main.85789e73.chunk.js",
-    "main.js.map": "/WebProject/static/js/main.85789e73.chunk.js.map",
-    "runtime-main.js": "/WebProject/static/js/runtime-main.1091ef0b.js",
-    "runtime-main.js.map": "/WebProject/static/js/runtime-main.1091ef0b.js.map",
-    "static/css/2.4659568d.chunk.css": "/WebProject/static/css/2.4659568d.chunk.css",
-    "static/js/2.2d5ea625.chunk.js": "/WebProject/static/js/2.2d5ea625.chunk.js",
-    "static/js/2.2d5ea625.chunk.js.map": "/WebProject/static/js/2.2d5ea625.chunk.js.map",
-    "static/js/3.3175c8ee.chunk.js": "/WebProject/static/js/3.3175c8ee.chunk.js",
-    "static/js/3.3175c8ee.chunk.js.map": "/WebProject/static/js/3.3175c8ee.chunk.js.map",
+    "main.css": "/WebProject/static/css/main.e09c5456.chunk.css",
+    "main.js": "/WebProject/static/js/main.216d2e14.chunk.js",
+    "main.js.map": "/WebProject/static/js/main.216d2e14.chunk.js.map",
+    "runtime-main.js": "/WebProject/static/js/runtime-main.29416270.js",
+    "runtime-main.js.map": "/WebProject/static/js/runtime-main.29416270.js.map",
+    "static/css/2.6fd23d23.chunk.css": "/WebProject/static/css/2.6fd23d23.chunk.css",
+    "static/js/2.0fca5447.chunk.js": "/WebProject/static/js/2.0fca5447.chunk.js",
+    "static/js/2.0fca5447.chunk.js.map": "/WebProject/static/js/2.0fca5447.chunk.js.map",
+    "static/js/3.974c029a.chunk.js": "/WebProject/static/js/3.974c029a.chunk.js",
+    "static/js/3.974c029a.chunk.js.map": "/WebProject/static/js/3.974c029a.chunk.js.map",
     "index.html": "/WebProject/index.html",
-    "static/css/2.4659568d.chunk.css.map": "/WebProject/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.b083720a.chunk.css.map": "/WebProject/static/css/main.b083720a.chunk.css.map",
-    "static/js/2.2d5ea625.chunk.js.LICENSE.txt": "/WebProject/static/js/2.2d5ea625.chunk.js.LICENSE.txt"
+    "static/css/2.6fd23d23.chunk.css.map": "/WebProject/static/css/2.6fd23d23.chunk.css.map",
+    "static/css/main.e09c5456.chunk.css.map": "/WebProject/static/css/main.e09c5456.chunk.css.map",
+    "static/js/2.0fca5447.chunk.js.LICENSE.txt": "/WebProject/static/js/2.0fca5447.chunk.js.LICENSE.txt",
+    "static/media/reviewSliderStyle.css": "/WebProject/static/media/right-quote-sign.84612df7.svg",
+    "static/media/slick-theme.css": "/WebProject/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.1091ef0b.js",
-    "static/css/2.4659568d.chunk.css",
-    "static/js/2.2d5ea625.chunk.js",
-    "static/css/main.b083720a.chunk.css",
-    "static/js/main.85789e73.chunk.js"
+    "static/js/runtime-main.29416270.js",
+    "static/css/2.6fd23d23.chunk.css",
+    "static/js/2.0fca5447.chunk.js",
+    "static/css/main.e09c5456.chunk.css",
+    "static/js/main.216d2e14.chunk.js"
   ]
 }
