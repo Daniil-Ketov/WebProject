@@ -3,8 +3,7 @@ import './App.css';
 import ReactDOM from "react-dom";
 import Modal from "./components/Modal";
 import {Signup} from "./components/signup";
-
-
+import PartnersSlider from "./components/reviewSlider";
 function App() {
     const [modalActive,setModalActive] = useState(undefined);
     return (
@@ -247,16 +246,9 @@ function App() {
                     <div>
                         <h1>text</h1>
                     </div>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                   <div>
+                       <PartnersSlider></PartnersSlider>
+                   </div>
                 </div>
                 <div class="partners container">
 
