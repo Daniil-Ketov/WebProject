@@ -1,0 +1,55 @@
+.work-with-us h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.work-with-us-slider-1 {
+    max-width: 100%;
+    width: 100%;
+}
+.work-with-us-slider-2{
+    max-width: 100%;
+    width: 100%;
+}
+.work-with-us-title {
+    width: 740px;
+    max-width: 100%;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: 0 auto 20px;
+    color: #505570;
+    font-weight: 500;
+    line-height: 1.37;
+    text-align: center;
+}
+
+.work-with-us-slide {
+    padding: 5px;
+}
+
+.work-with-us-slide div {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.work-with-us-slide img {
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+
+}
+
+#wwu-slider-2 .work-with-us-slide {
+    transform: translateX(50%);
+}
+
+@media screen and (min-width: 768px) {
+    .work-with-us h2 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .work-with-us-title {
+        margin-bottom: 40px;
+    }
+}

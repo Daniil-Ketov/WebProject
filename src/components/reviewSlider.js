@@ -12,7 +12,7 @@ import './reviewSliderStyle.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default class PreviousNextMethods extends Component {
+export default class ReviewSlider extends Component {
     constructor(props) {
         super(props);
         this.next = this.next.bind(this);
