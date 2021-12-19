@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.css"
+
 const Modal = ({active,setActive,children})=> {
     return (
         <div className={active ? "modal-suc act":"modal-suc"} onClick={()=> setActive(false)}>

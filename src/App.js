@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import './App.css';
-import ReactDOM from "react-dom";
 import Modal from "./components/Modal";
 import {Signup} from "./components/signup";
-import PartnersSlider from "./components/partnersSlider1";
 import ReviewSlider from "./components/reviewSlider";
 import PartnersSlider1 from "./components/partnersSlider1";
 import PartnersSlider2 from "./components/partnersSlider2";
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+
 function App() {
     const [modalActive,setModalActive] = useState(undefined);
     return (
@@ -308,10 +308,14 @@ function App() {
                             <h1>text</h1>
                         </div>
                         <div class="webform">
-                            <button onClick={()=> setModalActive(true)}>СВЯЗЬ С НАМИ</button>
-                            <Modal active={modalActive} setActive={setModalActive}>
-                                <Signup/>
-                            </Modal>
+                            <Link to="/modal"> <button onClick={()=> setModalActive(true)}>СВЯЗЬ С НАМИ</button> </Link>
+                            {/* eslint-disable-next-line no-restricted-globals */}
+                            {!modalActive && history.back()}
+                            <Routes>
+                                <Route path="/modal" element={<Modal active={modalActive} setActive={setModalActive}>
+                                    <Signup/>
+                                </Modal>}/>
+                            </Routes>
                         </div>
                     </div>
                 </div>

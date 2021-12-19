@@ -6,6 +6,7 @@ export const TextField = ({ label, ...props }) => {
     <div className="textS" >
       <label htmlFor={field.name}>{label}</label>
       <input
+          type="text"
         {...field} {...props}
         autoComplete="off"
       />
