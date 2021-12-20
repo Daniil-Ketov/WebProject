@@ -19,8 +19,52 @@
 
 }
 
+#send_request{
+    transition: 0.5s;
+    margin-top: 7px;
+    background-color: #f14d34;
+    border: 2px solid #f14d34;
+    border-radius: 3px;
+    outline: none;
+    font-size: 12px;
+    color: white;
+    height: 56px;
+    position: relative;
+}
+
+#send_request:disabled{
+    background:green;
+    transition: 4.5s;
+}
+#send_request:disabled:hover{
+    background:green;
+    transition: 5s;
+}
+#send_request:hover{
+    background: none;
+    transition: 0.5s;
+}
+
 .content {
     padding: 20px;
     border-radius: 12px;
-    background-color: white;
+    background-color: black;
+}
+#comments {
+    height: 257px;
+    width: 95vw;
+}
+.userInfo {
+    height: 44px;
+    width: 95vw;
+}
+@media screen and (min-width: 768px) {
+    #comments {
+        height: 357px;
+        width: 480px;
+    }
+    .userInfo {
+        height: 54px;
+        width: 480px;
+    }
 }
