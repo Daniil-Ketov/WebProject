@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/WebProject/static/css/main.e09c5456.chunk.css",
-    "main.js": "/WebProject/static/js/main.216d2e14.chunk.js",
-    "main.js.map": "/WebProject/static/js/main.216d2e14.chunk.js.map",
-    "runtime-main.js": "/WebProject/static/js/runtime-main.29416270.js",
-    "runtime-main.js.map": "/WebProject/static/js/runtime-main.29416270.js.map",
+    "main.css": "/WebProject/static/css/main.03649afa.chunk.css",
+    "main.js": "/WebProject/static/js/main.51ef7b45.chunk.js",
+    "main.js.map": "/WebProject/static/js/main.51ef7b45.chunk.js.map",
+    "runtime-main.js": "/WebProject/static/js/runtime-main.7feefd0e.js",
+    "runtime-main.js.map": "/WebProject/static/js/runtime-main.7feefd0e.js.map",
     "static/css/2.6fd23d23.chunk.css": "/WebProject/static/css/2.6fd23d23.chunk.css",
-    "static/js/2.0fca5447.chunk.js": "/WebProject/static/js/2.0fca5447.chunk.js",
-    "static/js/2.0fca5447.chunk.js.map": "/WebProject/static/js/2.0fca5447.chunk.js.map",
-    "static/js/3.974c029a.chunk.js": "/WebProject/static/js/3.974c029a.chunk.js",
-    "static/js/3.974c029a.chunk.js.map": "/WebProject/static/js/3.974c029a.chunk.js.map",
+    "static/js/2.7bc588cf.chunk.js": "/WebProject/static/js/2.7bc588cf.chunk.js",
+    "static/js/2.7bc588cf.chunk.js.map": "/WebProject/static/js/2.7bc588cf.chunk.js.map",
+    "static/js/3.63fdd6ae.chunk.js": "/WebProject/static/js/3.63fdd6ae.chunk.js",
+    "static/js/3.63fdd6ae.chunk.js.map": "/WebProject/static/js/3.63fdd6ae.chunk.js.map",
     "index.html": "/WebProject/index.html",
     "static/css/2.6fd23d23.chunk.css.map": "/WebProject/static/css/2.6fd23d23.chunk.css.map",
-    "static/css/main.e09c5456.chunk.css.map": "/WebProject/static/css/main.e09c5456.chunk.css.map",
-    "static/js/2.0fca5447.chunk.js.LICENSE.txt": "/WebProject/static/js/2.0fca5447.chunk.js.LICENSE.txt",
+    "static/css/main.03649afa.chunk.css.map": "/WebProject/static/css/main.03649afa.chunk.css.map",
+    "static/js/2.7bc588cf.chunk.js.LICENSE.txt": "/WebProject/static/js/2.7bc588cf.chunk.js.LICENSE.txt",
     "static/media/reviewSliderStyle.css": "/WebProject/static/media/right-quote-sign.84612df7.svg",
     "static/media/slick-theme.css": "/WebProject/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.29416270.js",
+    "static/js/runtime-main.7feefd0e.js",
     "static/css/2.6fd23d23.chunk.css",
-    "static/js/2.0fca5447.chunk.js",
-    "static/css/main.e09c5456.chunk.css",
-    "static/js/main.216d2e14.chunk.js"
+    "static/js/2.7bc588cf.chunk.js",
+    "static/css/main.03649afa.chunk.css",
+    "static/js/main.51ef7b45.chunk.js"
   ]
 }
