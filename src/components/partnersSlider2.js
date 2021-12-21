@@ -22,22 +22,25 @@ export default class PartnersSlider2 extends Component {
             dots: false,
             arrows: false,
             autoplay: true,
-            slidesToShow: 4,
+            slidesToShow: 6,
             slidesToScroll: 1,
             centerMode: true,
-            centerPadding: '18%',
+            centerPadding: '2%',
             autoplaySpeed: 3500,
             responsive: [
                 {
                     breakpoint: 1024,
-                    settings: {slidesToShow: 3}
+                    settings: {slidesToShow: 4,centerPadding: '1%',
+                    }
+
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint:600,
                     settings: {slidesToShow: 2}
                 }
             ]
         };
+
         return (
             <div>
                 <Slider ref={c => (this.slider = c)} {...settings} className="work-with-us-slider-2" id="wwu-slider-2">

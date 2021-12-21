@@ -39,10 +39,10 @@
 
 }
 
+
 #wwu-slider-2 .work-with-us-slide {
     transform: translateX(50%);
 }
-
 @media screen and (min-width: 768px) {
     .work-with-us h2 {
         font-size: 42px;

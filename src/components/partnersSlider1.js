@@ -29,7 +29,8 @@ export default class PartnersSlider1 extends Component {
             responsive: [
                 {
                     breakpoint: 1024,
-                    settings: {slidesToShow: 3}
+                    settings: {slidesToShow: 3,centerPadding: '12%',
+                    }
                 },
                 {
                     breakpoint: 600,
@@ -37,6 +38,7 @@ export default class PartnersSlider1 extends Component {
                 }
             ]
         };
+
         return (
             <div>
                 <Slider ref={c => (this.slider = c)} {...settings} className="work-with-us-slider-1" id="wwu-slider-1">

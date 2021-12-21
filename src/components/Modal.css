@@ -10,7 +10,7 @@
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: 0.5s;
+    transition: 2s;
     z-index: 1000;
 }
 .modal-suc.act {
@@ -52,11 +52,11 @@
 }
 #comments {
     height: 257px;
-    width: 95vw;
+    width: 100%;
 }
 .userInfo {
     height: 44px;
-    width: 95vw;
+    width: 100%;
 }
 @media screen and (min-width: 768px) {
     #comments {

@@ -60,6 +60,7 @@
 }
 
 .reviews-block {
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -76,6 +77,7 @@
 }
 
 .reviews-slider {
+
     width: 100%;
     padding: 20px 15px;
     border-right: none;
@@ -221,6 +223,7 @@
         flex-direction: inherit;
         padding: 66px 0 66px 68px;
         margin-top: 0px;
+
     }
 
     .reviews-slider {
