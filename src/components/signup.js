@@ -8,6 +8,7 @@ import Modal from "./Modal";
 import './Modal.css';
 import './FormStyle.css'
 
+let  check=0;
 
 
 export const Signup = () => {
@@ -29,8 +30,18 @@ const mailStore = (event) => {
 const [delay,setDelay] = useState(false);
 const [modal,setModal] = useState(undefined);
 const [requ,setRequ] = useState(true);
-    const checkEd = (event) => {
-        setRequ(!event.target.checked);
+    const checkEd = () => {
+        check=check+1;
+        if (check ==3 ) {
+            check =1;
+        }
+        if (check == 1) {
+            setRequ(false);
+        }
+        if (check ==2  ) {
+            setRequ(true)
+        }
+
     }
 const [errorModal,setErrorModal] = useState(undefined);
     const validate = Yup.object({
@@ -73,15 +84,16 @@ const [errorModal,setErrorModal] = useState(undefined);
     >
       {formik => (
           <Form>
-              {modal &&  <Modal className="mod" setActive={setModal} active={modal}>Информация отправлена </Modal>}
-              {errorModal && <Modal setActive={setErrorModal} active={errorModal}> Произошла ошибка, попробуйте позднее </Modal>}
-            <TextField className="userInfo mb-2 " placeholder="Ваше имя"  name="firstName" type="text" onInput={nameStore}/>
-            <TextField className="userInfo mb-2 " placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
-            <TextField className="userInfo mb-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
-              <Textarea className="userInfo " placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
-              <input type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
-              <label id="admit" htmlFor="checker"> <span id="text-1">Отправляя заявку, я даю согласие на <span> </span> <a id="text-2" href="https://drupal-coder.ru/privacy-policy"> обработку своих персональных данных.* </a>   </span></label>
-              <button id="send_request"  type="submit"  disabled={delay} > СВЯЖИТЕСЬ С НАМИ </button>
+              {modal &&  <Modal id="mod" setActive={setModal} active={modal}> <span id={"succ"}>Информация отправлена</span> </Modal>}
+              {errorModal && <Modal id="mod" setActive={setErrorModal} active={errorModal}> <span id="err"> Произошла ошибка, попробуйте позднее </span></Modal>}
+            <TextField className="userInfo" placeholder="Ваше имя"  name="firstName" type="text" onInput={nameStore}/>
+            <TextField className="userInfo mt-2" placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
+            <TextField className="userInfo mt-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
+              <Textarea className="userInfo  mt-2" placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
+              <input  type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
+              <label onClick={() => checkEd()} id="admit" htmlFor="checker"> <input required={requ} type="checkbox" id="checker" value="yes" name="checker" className="crutch_check"/>
+                  <span id="text-1">Отправляя заявку, я даю согласие на <span> </span> <a id="text-2" href="https://drupal-coder.ru/privacy-policy"> обработку своих персональных данных.* </a>   </span></label>
+              <button  id="send_request"  type="submit"  disabled={delay} > СВЯЖИТЕСЬ С НАМИ </button>
           </Form>
       )}
     </Formik>

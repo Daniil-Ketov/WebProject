@@ -316,7 +316,7 @@ function App() {
                             {/* eslint-disable-next-line no-restricted-globals */}
                             {!modalActive && history.back()}
                             <Routes>
-                                <Route path="/modal" element={<Modal active={modalActive} setActive={setModalActive}>
+                                <Route path="/modal" element={<Modal  active={modalActive} setActive={setModalActive}>
                                     <Signup/>
                                 </Modal>}/>
                             </Routes>

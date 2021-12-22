@@ -19,8 +19,13 @@ Form {
   flex-direction: column;
 }
 
-
-
+Modal.content {
+  background: black;
+}
+.content {
+  padding: 20px;
+  border-radius: 12px;
+}
 #check {
   height: 21px;
   width: 21px;
@@ -30,6 +35,7 @@ Form {
 .error {
   color: red;
   font-size: 15px;
+
 }
 #confirmation {
   display: flex;

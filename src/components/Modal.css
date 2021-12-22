@@ -21,4 +21,15 @@
     display: flex;
     justify-content: right;
 }
+.textS {
+    display: flex;
+    flex-direction: column;
+}
+#err {
+    color: red;
+}
+#succ {
+    color: green;
+}
+
 
