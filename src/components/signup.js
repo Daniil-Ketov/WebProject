@@ -75,7 +75,7 @@ const [errorModal,setErrorModal] = useState(undefined);
             <TextField className="userInfo mb-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
               <Textarea className="userInfo " placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
               <label htmlFor="footer-policy" className="chb-block">
-                  <input name="footer-policy" type="checkbox" className="chb" id="footer-policy"/>
+                  <input required={true} name="footer-policy" type="checkbox" className="chb" id="footer-policy"/>
                   <span className="chb-place"></span>
                   <span>
                         <span className="footer-checkbox-text">Отправляя заявку, я даю согласие на
@@ -83,11 +83,9 @@ const [errorModal,setErrorModal] = useState(undefined);
                         </span>
                       </span>
               </label>
-
               <button id="send_request"  type="submit"  disabled={delay} > СВЯЖИТЕСЬ С НАМИ </button>
           </Form>
       )}
     </Formik>
-
   )
 }
