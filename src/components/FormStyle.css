@@ -3,7 +3,7 @@
     margin-top: 7px;
     background-color: #f14d34;
     border: 2px solid #f14d34;
-    border-radius: 3px;
+    border-radius: 7px;
     outline: none;
     font-size: 12px;
     color: white;
@@ -27,7 +27,71 @@
     color: #fff;
     font-size: 14px;
 }
+.custom_check{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+#checker{
+    margin-top: 7px;
+}
+#admit {
+    color: white;
+    justify-content: space-between;
+    font-size: 13px;
+}
+#text-2 {
+color:#f14d34 ;
+}
+.custom_check+label{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+.custom_check+label::before{
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid grey;
+    border-radius: 0.4em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+#text-2:visited {
+    color: #f14d34;
+}
+#text-2:link {
+    text-decoration:none ;
+}
+#text-2:hover {
+    text-decoration: underline ;
+}
+.custom_check:checked+label::before{
+    background-image: url("../Images/checked-icon.svg");
+    background-size: 2em 2em;
+    border: 2px solid #f14d34;
+    box-shadow: 0 0 10px #f14d34;
+}
+#admit {
+    display: flex;
 
+    width: 100%;
+}
+#admit-1 {
+    color: white;
+    width: 433px;
+    height: 32px;
+
+}
+#admit-2 {
+    color:#f14d34;
+    text-align: center;
+}
 .userInfo {
     width: 480px;
     max-width: 100%;
@@ -43,6 +107,9 @@
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+
+
+
 .userInfo:focus {
     border-color: #f14d34;
     outline: 0;
@@ -57,7 +124,7 @@
 }
 
 #comments {
-    height: 257px;
+    height: 138px;
     width: 100%;
 }
 .userInfo {
@@ -66,7 +133,7 @@
 }
 @media screen and (min-width: 768px) {
     #comments {
-        height: 357px;
+        height: 138px;
         width: 480px;
     }
     .userInfo {

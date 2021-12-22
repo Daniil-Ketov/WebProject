@@ -25,8 +25,13 @@ const phoneStore = (event) =>{
 const mailStore = (event) => {
     localStorage["E-mail"]=event.target.value;
 }
+
 const [delay,setDelay] = useState(false);
 const [modal,setModal] = useState(undefined);
+const [requ,setRequ] = useState(true);
+    const checkEd = (event) => {
+        setRequ(!event.target.checked);
+    }
 const [errorModal,setErrorModal] = useState(undefined);
     const validate = Yup.object({
     firstName: Yup.string()
@@ -74,18 +79,12 @@ const [errorModal,setErrorModal] = useState(undefined);
             <TextField className="userInfo mb-2 " placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
             <TextField className="userInfo mb-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
               <Textarea className="userInfo " placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
-              <label htmlFor="footer-policy" className="chb-block">
-                  <input required={true} name="footer-policy" type="checkbox" className="chb" id="footer-policy"/>
-                  <span className="chb-place"></span>
-                  <span>
-                        <span className="footer-checkbox-text">Отправляя заявку, я даю согласие на
-                          <a href="">обработку своих персональных данных</a>
-                        </span>
-                      </span>
-              </label>
+              <input type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
+              <label id="admit" htmlFor="checker"> <span id="text-1">Отправляя заявку, я даю согласие на <span> </span> <a id="text-2" href="https://drupal-coder.ru/privacy-policy"> обработку своих персональных данных.* </a>   </span></label>
               <button id="send_request"  type="submit"  disabled={delay} > СВЯЖИТЕСЬ С НАМИ </button>
           </Form>
       )}
     </Formik>
+
   )
 }

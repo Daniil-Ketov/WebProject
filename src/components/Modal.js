@@ -13,8 +13,8 @@ const Modal = ({active,setActive,children})=> {
             <div className={active ? "modal-suc act " : "modal-suc hidden"} onClick={() => setActive(false)} >
                  <FadeInLeft>
                     <div className="content" onClick={e => e.stopPropagation()}>
+                       <div id="butt"><button className="btn-close-white" onClick={() => setActive(false)}>ЗАКРЫТЬ</button></div>
                         {children}
-                        <button className="buttonToClose" onClick={() => setActive(false)}>ЗАКРЫТЬ</button>
                     </div>
                 </FadeInLeft>
             </div>
