@@ -6,7 +6,7 @@ import {Textarea} from "./Textarea";
 import axios from "axios";
 import Modal from "./Modal";
 import './Modal.css';
-
+import './FormStyle.css'
 
 
 
@@ -70,15 +70,21 @@ const [errorModal,setErrorModal] = useState(undefined);
           <Form>
               {modal &&  <Modal className="mod" setActive={setModal} active={modal}>Информация отправлена </Modal>}
               {errorModal && <Modal setActive={setErrorModal} active={errorModal}> Произошла ошибка, попробуйте позднее </Modal>}
-            <TextField className="userInfo mb-2 p-1" placeholder="Ваше имя"  name="firstName" type="text" onInput={nameStore}/>
-            <TextField className="userInfo mb-2 p-1" placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
-            <TextField className="userInfo mb-2 p-1" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
-              <Textarea className="p-1" placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
-              <div id="confirmation">
-                  <input required={true} type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
-                  <label for="checker"> Отправляя заявку, я даю согласие на <a href=""> обработку своих персональных данных.*</a></label>
-              </div>
-            <button id="send_request"  type="submit"  disabled={delay} > Свяжитесь с нами </button>
+            <TextField className="userInfo mb-2 " placeholder="Ваше имя"  name="firstName" type="text" onInput={nameStore}/>
+            <TextField className="userInfo mb-2 " placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
+            <TextField className="userInfo mb-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
+              <Textarea className="userInfo " placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
+              <label htmlFor="footer-policy" className="chb-block">
+                  <input name="footer-policy" type="checkbox" className="chb" id="footer-policy"/>
+                  <span className="chb-place"></span>
+                  <span>
+                        <span className="footer-checkbox-text">Отправляя заявку, я даю согласие на
+                          <a href="">обработку своих персональных данных</a>
+                        </span>
+                      </span>
+              </label>
+
+              <button id="send_request"  type="submit"  disabled={delay} > СВЯЖИТЕСЬ С НАМИ </button>
           </Form>
       )}
     </Formik>

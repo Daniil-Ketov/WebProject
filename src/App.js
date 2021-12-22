@@ -6,6 +6,10 @@ import ReviewSlider from "./components/reviewSlider";
 import PartnersSlider1 from "./components/partnersSlider1";
 import PartnersSlider2 from "./components/partnersSlider2";
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+
+
+
 
 function App() {
     const [modalActive,setModalActive] = useState(undefined);
@@ -316,6 +320,7 @@ function App() {
                                     <Signup/>
                                 </Modal>}/>
                             </Routes>
+
                         </div>
                     </div>
                 </div>

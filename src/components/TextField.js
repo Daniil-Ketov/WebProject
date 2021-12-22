@@ -1,5 +1,6 @@
 import React from 'react';
 import { ErrorMessage, useField } from 'formik';
+import './Modal.css'
 export const TextField = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
