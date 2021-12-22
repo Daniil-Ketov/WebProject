@@ -7,7 +7,7 @@ import axios from "axios";
 import Modal from "./Modal";
 import './Modal.css';
 import './FormStyle.css'
-
+import ModalAnswer from "./modalAnswer";
 let  check=0;
 
 
@@ -84,8 +84,8 @@ const [errorModal,setErrorModal] = useState(undefined);
     >
       {formik => (
           <Form>
-              {modal &&  <Modal id="mod" setActive={setModal} active={modal}> <span id={"succ"}>Информация отправлена</span> </Modal>}
-              {errorModal && <Modal id="mod" setActive={setErrorModal} active={errorModal}> <span id="err"> Произошла ошибка, попробуйте позднее </span></Modal>}
+              {modal &&  <ModalAnswer id="mod" setActive={setModal} active={modal}> <span id={"succ"}>Информация отправлена</span> </ModalAnswer>}
+              {errorModal && <ModalAnswer id="mod" setActive={setErrorModal} active={errorModal}> <span id="err"> Произошла ошибка, попробуйте позднее </span></ModalAnswer>}
             <TextField className="userInfo" placeholder="Ваше имя"  name="firstName" type="text" onInput={nameStore}/>
             <TextField className="userInfo mt-2" placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
             <TextField className="userInfo mt-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
