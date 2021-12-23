@@ -1,8 +1,14 @@
 import React, {useState} from "react";
 import './App.css';
-import ReactDOM from "react-dom";
 import Modal from "./components/Modal";
 import {Signup} from "./components/signup";
+import ReviewSlider from "./components/reviewSlider";
+import PartnersSlider1 from "./components/partnersSlider1";
+import PartnersSlider2 from "./components/partnersSlider2";
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+
+
 
 
 function App() {
@@ -74,7 +80,7 @@ function App() {
                     </div>
                 </div>
             </header>
-            <main class="container-fluid justify-content-center">
+            <main class="container-fluid justify-content-center g-0">
                 <div class="services container">
                     <div>
                         <h1>text</h1>
@@ -247,20 +253,12 @@ function App() {
                     <div>
                         <h1>text</h1>
                     </div>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                   <div>
+                       <ReviewSlider></ReviewSlider>
+                   </div>
                 </div>
-                <div class="partners container">
-
-                </div>
+                    <PartnersSlider1></PartnersSlider1>
+                    <PartnersSlider2></PartnersSlider2>
                 <div class="faq container">
                     <div>
                         <h1>text</h1>
@@ -314,10 +312,15 @@ function App() {
                             <h1>text</h1>
                         </div>
                         <div class="webform">
-                            <button onClick={()=> setModalActive(true)}>СВЯЗЬ С НАМИ</button>
-                            <Modal active={modalActive} setActive={setModalActive}>
-                                <Signup/>
-                            </Modal>
+                            <Link to="/modal"> <button onClick={()=> setModalActive(true)}>СВЯЗЬ С НАМИ</button> </Link>
+                            {/* eslint-disable-next-line no-restricted-globals */}
+                            {!modalActive && history.back()}
+                            <Routes>
+                                <Route path="/modal" element={<Modal  active={modalActive} setActive={setModalActive}>
+                                    <Signup/>
+                                </Modal>}/>
+                            </Routes>
+
                         </div>
                     </div>
                 </div>

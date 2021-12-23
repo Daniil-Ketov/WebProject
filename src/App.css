@@ -18,24 +18,24 @@ Form {
   display: flex;
   flex-direction: column;
 }
-#submit {
-  height: 56px;
+
+Modal.content {
+  background: black;
+}
+.content {
+  padding: 20px;
+  border-radius: 12px;
 }
 #check {
   height: 21px;
   width: 21px;
 }
-.userInfo {
-  height: 54px;
-  width: 480px;
-}
-#comments {
-  height: 357px;
-  width: 480px;
-}
+
+
 .error {
   color: red;
   font-size: 15px;
+
 }
 #confirmation {
   display: flex;

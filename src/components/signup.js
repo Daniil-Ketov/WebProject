@@ -6,10 +6,43 @@ import {Textarea} from "./Textarea";
 import axios from "axios";
 import Modal from "./Modal";
 import './Modal.css';
+import './FormStyle.css'
+import ModalAnswer from "./modalAnswer";
+let  check=0;
 
 
 export const Signup = () => {
+
+const textStore =(event) => {
+    localStorage["Comments"] = event.target.value;
+    }
+const nameStore = (event) => {
+    localStorage["Name"]=event.target.value;
+}
+const phoneStore = (event) =>{
+    localStorage["Phone"]=event.target.value;
+
+}
+const mailStore = (event) => {
+    localStorage["E-mail"]=event.target.value;
+}
+
+const [delay,setDelay] = useState(false);
 const [modal,setModal] = useState(undefined);
+const [requ,setRequ] = useState(true);
+    const checkEd = () => {
+        check=check+1;
+        if (check ==3 ) {
+            check =1;
+        }
+        if (check == 1) {
+            setRequ(false);
+        }
+        if (check ==2  ) {
+            setRequ(true)
+        }
+
+    }
 const [errorModal,setErrorModal] = useState(undefined);
     const validate = Yup.object({
     firstName: Yup.string()
@@ -21,29 +54,17 @@ const [errorModal,setErrorModal] = useState(undefined);
       .required('E-mail обязателен к заполнению'),
     comments: Yup.string()
   })
-
   return (
     <Formik
       initialValues={{
-        firstName: '',
-        phoneNum: '',
-        email: '',
-        comments: '',
+        firstName: localStorage.getItem("Name"),
+        phoneNum: localStorage.getItem("Phone"),
+        email: localStorage.getItem("E-mail"),
+        comments: localStorage.getItem("Comments"),
       }}
       validationSchema={validate}
       onSubmit={async (values) => {
-        const data = {
-            records: [
-                {
-                    fields:{
-                        firstName: values.firstName,
-                        phoneNum: values.phone,
-                        email: values.email,
-                        comments: values.comments
-                    },
-                },
-            ],
-        };
+          setDelay(true);
         await axios.post(
             'https://formcarry.com/s/JR-H-3w-HWs',
             {
@@ -54,28 +75,26 @@ const [errorModal,setErrorModal] = useState(undefined);
             }
         )
             .then((response)=>{
-                setModal(true);
+                setTimeout(() => { setModal(true); setDelay(false); }, 3000);
             })
             .catch((e)=> {
-               setErrorModal(true);
+                setTimeout(() => {  setErrorModal(true); setDelay(false); }, 3000);
             });
       }}
     >
       {formik => (
           <Form>
-              {modal &&  <Modal setActive={setModal} active={modal}>Информация отправлена </Modal>}
-              {errorModal && <Modal setActive={setErrorModal} active={errorModal}> Произошла ошибка, попробуйте позднее </Modal>}
-            <TextField className="userInfo mb-2" placeholder="Ваше имя" name="firstName" type="text" />
-            <TextField className="userInfo mb-2" placeholder="Телефон" name="phoneNum" type="text"/>
-            <TextField className="userInfo mb-2" placeholder="E-mail" name="email" type="email" />
-              <Textarea placeholder="Ваш комментарий" name="comments"  id="comments" />
-              <div id="confirmation">
-                  <input required={true} type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
-                  <label for="checker"> Отправляя заявку, я даю согласие на <a href=""> обработку своих персональных данных.*</a></label>
-              </div>
-            <button id="submit" type="submit">Свяжитесь с нами</button>
+              {modal &&  <ModalAnswer id="mod" setActive={setModal} active={modal}> <span id={"succ"}>Информация отправлена</span> </ModalAnswer>}
+              {errorModal && <ModalAnswer id="mod" setActive={setErrorModal} active={errorModal}> <span id="err"> Произошла ошибка, попробуйте позднее </span></ModalAnswer>}
+            <TextField className="userInfo" placeholder="Ваше имя"  name="firstName" type="text" onInput={nameStore}/>
+            <TextField className="userInfo mt-2" placeholder="Телефон" name="phoneNum" type="text" onInput={phoneStore}/>
+            <TextField className="userInfo mt-2" placeholder="E-mail" name="email" type="email" onInput={mailStore}/>
+              <Textarea className="userInfo  mt-2" placeholder="Ваш комментарий" name="comments"  id="comments"  onInput={textStore} />
+              <input  type="checkbox" id="checker" value="yes" name="checker" className="custom_check"/>
+              <label onClick={() => checkEd()} id="admit" htmlFor="checker"> <input required={requ} type="checkbox" id="checker" value="yes" name="checker" className="crutch_check"/>
+                  <span id="text-1">Отправляя заявку, я даю согласие на <span> </span> <a id="text-2" href="https://drupal-coder.ru/privacy-policy"> обработку своих персональных данных.* </a>   </span></label>
+              <button  id="send_request"  type="submit"  disabled={delay} > СВЯЖИТЕСЬ С НАМИ </button>
           </Form>
-
       )}
     </Formik>
 
