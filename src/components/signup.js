@@ -66,7 +66,7 @@ const [errorModal,setErrorModal] = useState(undefined);
       onSubmit={async (values) => {
           setDelay(true);
         await axios.post(
-            'https://formcarry.com/s/JR-H-3w-HWs',
+            'https://formcarry.com/s/TFLAwInJiIQ',
             {
                 'Имя' : values.firstName,
                 'Телефон -': values.phoneNum,
